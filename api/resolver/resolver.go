@@ -9,7 +9,7 @@ import (
 type ResolverService interface {
 	AddHost(host string)
 	DelHost(host string)
-	GetIP(host string) string
+	GetNextIP(host string) string
 	GetIPs(host string) ([]net.IP, []net.IP)
 	GetIPsStr(host string) ([]string, []string)
 	Dump(w io.Writer)
