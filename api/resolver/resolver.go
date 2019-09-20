@@ -5,8 +5,8 @@ import (
 	"net"
 )
 
-// ResolverService is an interface for host name ipv4 resolver
-type ResolverService interface {
+// Resolver is an interface for host name ipv4 resolver
+type Resolver interface {
 	AddHost(host string)
 	DelHost(host string)
 	GetNextIP(host string) string
