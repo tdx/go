@@ -13,4 +13,5 @@ type Resolver interface {
 	GetIPs(host string) ([]net.IP, []net.IP)
 	GetIPsStr(host string) ([]string, []string)
 	Dump(w io.Writer)
+	DumpPrefix(w io.Writer, prefix string)
 }
