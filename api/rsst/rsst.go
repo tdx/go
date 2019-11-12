@@ -15,8 +15,13 @@ type Registrator interface {
 	AddHandler(ID uint16, f Handler)
 }
 
-// Rsst ...
-type Rsst interface {
-	Registrator
+// Packer ...
+type Packer interface {
+	Pack([]Info) []byte
+	Unpack([]byte) []Info
+}
+
+// Processor ...
+type Processor interface {
 	Process([]Info)
 }
