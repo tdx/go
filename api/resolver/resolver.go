@@ -9,6 +9,7 @@ import (
 type Resolver interface {
 	AddHost(host string)
 	DelHost(host string)
+	Stop()
 	GetNextIP(host string) string
 	GetIPs(host string) ([]net.IP, []net.IP)
 	GetIPsStr(host string) ([]string, []string)
