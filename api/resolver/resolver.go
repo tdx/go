@@ -11,6 +11,7 @@ type Resolver interface {
 	DelHost(host string)
 	Stop()
 	GetNextIP(host string) string
+	GetNextIPWithIdx(host string) (string, int)
 	GetIPs(host string) ([]net.IP, []net.IP)
 	GetIPsStr(host string) ([]string, []string)
 	Dump(w io.Writer)
